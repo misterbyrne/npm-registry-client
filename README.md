@@ -312,3 +312,8 @@ any):
   [couch-login](https://npmjs.org/package/couch-login).
 * `sessionToken` {string} A random identifier for this set of client requests.
   Default = 8 random hexadecimal bytes.
+* `isFromCI` {boolean} Identify to severs if this request is coming from CI (for statistics purposes).
+  Default = detected from environment– primarily this is done by looking for
+  the CI environment variable to be set to `true`.  Also accepted are the
+  existence of the `JENKINS_URL`, `bamboo.buildKey` and `TDDIUM` environment
+  variables.
